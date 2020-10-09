@@ -2,18 +2,22 @@
 #include "caesar.h"
 
 char shiftChar(char c, int rshift){
-   char upperC, lowerC;
+   int num;
    if(isupper(c)){
-      upperC = (c + rshift - 65) % 26 + 65; 
-      return upperC;
+      num = ((int)c - 65 + rshift) % 26 + 65; 
+      if(num<65){
+         return char(26+num);
+      }
+      return char(num);
    }
    else if(islower(c)){
-      lowerC = (c + rshift - 97) % 26 + 97;
-      return lowerC; 
+      num = ((int)c - 96 + rshift) % 26 + 96;
+      if(num < 97){
+        return char(26+num); 
+      } 
+      return char(num);
    }
-   else{
-      return c;
-   }
+   return c;
 }
 
 std::string encryptCaesar(std::string plaintext, int rshift){
