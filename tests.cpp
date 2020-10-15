@@ -2,6 +2,8 @@
 #include "doctest.h"
 #include "funcs.h"
 #include "caesar.h"
+#include "vigenere.h'
+#include "decrypt.h"
 
 TEST_CASE("shiftChar"){
      CHECK(shiftChar('a',4) == 'e');
