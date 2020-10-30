@@ -47,7 +47,7 @@ std::string decode(std::string encryptedStr){
 
 
 
-	//the above is wrong - misinterpreted the problem and realized because I couldn't go on 
+	// wrong? 
 	/*int charDistance = 0;
         for(int i=0; i<26; i++){
                 charDistance+=sqrt(pow((real_Frequencies[i]-sentence[i]),2));
