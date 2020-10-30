@@ -17,6 +17,8 @@ decrypt.o: decrypt.cpp decrypt.h
 
 main.o: main.cpp funcs.h caesar.h vigenere.h decrypt.h
 
+decode.o: decode.cpp decode.h decrypt.h 
+
 tests.o: tests.cpp  doctest.h caesar.h vigenere.h decrypt.h
 
 clean:
