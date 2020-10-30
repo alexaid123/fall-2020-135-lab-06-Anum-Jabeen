@@ -4,6 +4,7 @@
 #include "caesar.h"
 #include "vigenere.h'
 #include "decrypt.h"
+#include "decode.cpp"
 
 TEST_CASE("shiftChar"){
      CHECK(shiftChar('a',4) == 'e');
@@ -40,4 +41,8 @@ TEST_CASE("decryptVigenere"){
      CHECK(decryptVigenere("Jevpq, 60122&^%,", "cake")=="Hello, 60122&^%,");
      CHECK(decryptVigenere("97864@#&*!!!!)56378", "hdjoak")=="97864@#&*!!!!)56378");
      CHECK(decryptVigenere(" ", "EmPtY")==" ");
+}
+
+TEST_CASE("decode"){
+     CHECK(decode(encryptCaesar("Way to Go!", 5))=="Way to Go!");
 }
