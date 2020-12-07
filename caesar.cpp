@@ -7,7 +7,7 @@ char shiftChar(char c, int rshift){
    // Added a space 
       num = ((int)c - 65 + rshift) % 26 + 65; 
       if(num<65){
-         return char(26+num);
+         return char(26+num); // Second Commenting 
       }
       return char(num);
    }
